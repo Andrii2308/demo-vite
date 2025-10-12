@@ -1,0 +1,222 @@
+/* Скидання стилів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Кнопка для відкриття меню */
+.menu-open-btn {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-btn-svg {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-open-btn:hover .menu-btn-svg,
+.menu-open-btn:focus .menu-btn-svg {
+  fill: #404bbf;
+}
+
+/* Overlay меню */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1000;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* Кнопка закриття */
+.menu-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(20, 20, 20, 0.1);
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-close-btn:hover .menu-btn-svg,
+.menu-close-btn:focus .menu-btn-svg {
+  fill: #404bbf;
+}
+
+/* Навігація */
+.menu-nav {
+  margin-top: 76px;
+}
+
+.ul-menu-over {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  list-style: none;
+}
+
+.menu-link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link.menu-link-active,
+.menu-phone.menu-link-active {
+  color: #404bbf;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: #404bbf;
+}
+
+/* Контакти */
+.menu-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: auto;
+  margin-bottom: 48px;
+}
+
+.menu-phone,
+.menu-email {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-phone:hover,
+.menu-phone:focus,
+.menu-email:hover,
+.menu-email:focus {
+  color: #404bbf;
+}
+
+/* Соціальні іконки */
+.menu-social-modal {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.menu-social-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-social-icon:hover,
+.menu-social-icon:focus {
+  background-color: #31d0aa;
+}
+
+.menu-svg {
+  fill: #f4f4fd;
+}
+
+/* Десктопна версія */
+@media screen and (min-width: 1158px) {
+  .menu-open-btn {
+    display: none;
+  }
+
+  .menu-overlay {
+    display: none;
+  }
+
+  /* Горизонтальна навігація для десктопів */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+  }
+
+  .menu-nav {
+    margin-top: 0;
+  }
+
+  .ul-menu-over {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .menu-link {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .menu-contacts {
+    flex-direction: row;
+    gap: 40px;
+    margin: 0;
+  }
+
+  .menu-phone,
+  .menu-email {
+    font-size: 16px;
+  }
+
+  .menu-social-modal {
+    display: none; /* Приховуємо соціальні іконки на десктопі */
+  }
+}
