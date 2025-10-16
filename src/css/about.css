@@ -1,7 +1,7 @@
 /* -----------MOB----------- */
 
 .about {
-    background-image: url(/img/about/about-bg-mob-1x.jpg);
+    background-image: url(/img/about/about-bg-mob-1x.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -10,7 +10,7 @@
     padding-bottom: 64px;
     @media screen and (min-resolution: 2x),
     (-webkit-min-device-pixel-ratio: 2) {
-        background-image: url(/img/about/about-bg-mob-2x.jpg);
+        background-image: url(/img/about/about-bg-mob-2x.webp);
     }
 }
 .about {
@@ -62,14 +62,14 @@ padding: 64px 0px;
     
 
     .about {
-        background-image: url(/img/about/about-bg-tab-1x.jpg);
+        background-image: url(/img/about/about-bg-tab-1x.webp);
         padding-top: 80px;
         padding-bottom: 80px;
 
 
         @media screen and (min-resolution: 2x),
         (-webkit-min-device-pixel-ratio: 2) {
-            background-image: url(/img/about/about-bg-tab-2x.jpg);
+            background-image: url(/img/about/about-bg-tab-2x.webp);
         }
     }
     .about {
@@ -100,13 +100,13 @@ padding: 80px 0px;
     
 
     .about {
-        background-image: url(/img/about/about-bg-desctop-1x.jpg);
+        background-image: url(/img/about/about-bg-desctop-1x.webp);
         padding-top: 112px;
         padding-bottom: 94px;
 
         @media screen and (min-resolution: 2x),
         (-webkit-min-device-pixel-ratio: 2) {
-            background-image: url(/img/about/about-bg-desctop-2x.jpg);
+            background-image: url(/img/about/about-bg-desctop-2x.webp);
         }
     }
  
